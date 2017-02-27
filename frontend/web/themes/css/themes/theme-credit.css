@@ -2212,6 +2212,8 @@ ol, ul { margin-bottom: 30px; }
 .new-container{ width: 1700px !important;}
 .cursor-pointer { cursor: pointer; }
 .displaynone {display:none;}
+.side-panel-wrapper-remove-width{width:70% !important;}
+
 @-moz-keyframes zooming { 0% { -moz-transform: scale(1, 1); transform: scale(1, 1); }
   50% { -moz-transform: scale(1.1, 1.1); transform: scale(1.1, 1.1); }
   100% { -moz-transform: scale(1, 1); transform: scale(1, 1); } }

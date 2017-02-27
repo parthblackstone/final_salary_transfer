@@ -54,10 +54,10 @@ $this->registerJsFile('@web/themes/js/canvasjs.min.js', ['position' => \yii\web\
                             <div class="form-group">
                                 <label>Expected Growth Rate</label>
                                 <div class="input-group">
-                                    <?= $form->field($model, 'expected_growth_rate')->textInput(['type' => 'number','class'=> 'form-control input-lg','value'=>'2','min'=>"1", 'max'=>"8",'required'=>'required'])->label(false) ?>
+                                    <?= $form->field($model, 'expected_growth_rate')->dropDownList($model->getExpectedGrowthRateDropdown(), ['prompt' => 'Expected Growth Rate','class'=> 'form-control input-lg','value'=>'2.25','required'=>'required'])->label(false) ?>
                                     <!--<div class="input-group-addon">%</div>-->
                                 </div>
-                                <!-- <div id="egrSlider" class="form-slider" data-input="#egrSlider" data-min="1" data-max="8" data-value="2"></div>-->
+                                <!--<div id="calculateincome-expected_growth_rate" class="form-slider" data-input="#calculateincome-expected_growth_rate" data-min="1" data-max="8" data-value="2"></div>-->
                             </div>
                             <!-- Form Item -->
                             <div class="form-group">
@@ -69,17 +69,37 @@ $this->registerJsFile('@web/themes/js/canvasjs.min.js', ['position' => \yii\web\
                                 <!--<div id="monthSlider" class="form-slider" data-input="#monthNumber" data-min="6" data-max="96" data-value="24"></div>-->
                             </div>
                             <!-- Form Item -->
+                            <?php /*
+                            <div class="form-group">
+                                <label>Years Since Leaving</label>
+                                <div class="input-group">
+                                    <?= $form->field($model, 'years_since_leaving')->textInput(['type' => 'number','class'=> 'form-control input-lg','value'=>'0','required'=>'required'])->label(false) ?>
+                                    <!--<div class="input-group-addon">months</div>-->
+                                </div>
+                                <!--<div id="monthSlider" class="form-slider" data-input="#monthNumber" data-min="6" data-max="96" data-value="24"></div>-->
+                            </div>
+                            <!-- Form Item -->
+                            <div class="form-group">
+                                <label>Pension Income (payable at Retirement) at Date of Leaving</label>
+                                <div class="input-group">
+                                    <?= $form->field($model, 'pension_income_at_date_of_leaving')->textInput(['type' => 'number','class'=> 'form-control input-lg','value'=>'0','required'=>'required'])->label(false) ?>
+                                    <!--<div class="input-group-addon">months</div>-->
+                                </div>
+                                <!--<div id="monthSlider" class="form-slider" data-input="#monthNumber" data-min="6" data-max="96" data-value="24"></div>-->
+                            </div>
+                            */ ?>
+                            <!-- Form Item -->
                             <div class="form-group displaynone projected_fund_at_retirement">
                                 <label>Projected Fund at Retirement</label>
                                 <span class="form-total">&#163;<span id="projected_fund_at_retirement" >0</span></span>
                             </div>
                             <div class="form-group displaynone potential_annual_gross_drawdown_income">
                                 <label>Potential Annual Gross Drawdown Income</label>
-                                <span class="form-total">&#163;<span id="potential_annual_gross_drawdown_income" >0</span><i class="i-after ti-pencil cursor-pointer edit_annual_gross_drawdown_income"></i></span>
+                                <span class="form-total">&#163;<span id="potential_annual_gross_drawdown_income" >0</span></span><!-- <i class="i-after ti-pencil cursor-pointer edit_annual_gross_drawdown_income"></i> -->
                             </div>
                             <!-- Form Item -->
                             <div class="form-group displaynone calculateincome-annual_gross_drawdown_income">
-                                <label>Potential Annual Gross Drawdown Income</label>
+                                <label>Required Annual Gross Drawdown Income</label>
                                 <div class="input-group">
                                     <?= $form->field($model, 'annual_gross_drawdown_income')->textInput(['type' => 'number','class'=> 'form-control input-lg','value'=>'0'])->label(false) ?>
                                     <!--<div class="input-group-addon">months</div>-->

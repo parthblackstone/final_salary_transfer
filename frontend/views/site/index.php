@@ -259,7 +259,6 @@ $this->title = 'Final Salary Transfer';
     		</div>
     	</section>
     <!-- Side Panel -->
-    <!-- Side Panel -->
     <nav id="side-panel" class="right bg-dark dark">
         <div class="side-panel-wrapper side-panel-wrapper-remove-width ">
 

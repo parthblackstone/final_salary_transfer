@@ -84,7 +84,7 @@ class CalculatorController extends Controller {
 			$cetv = $request['CalculateIncome']['cetv'];
 			$expected_growth_rate = $request['CalculateIncome']['expected_growth_rate'];
 			// Post Data End
-			$projected_fund_at_retirement = $monthly_interest_rate = $monthly_interest_rate_plus_1 = $months_in_retirement = $years_in_retirement = 0; // Set Default Value
+			$projected_fund_at_retirement = $monthly_interest_rate = $monthly_interest_rate_plus_1 = $months_in_retirement = $years_in_retirement = $projected_potential_gross_pension_at_retirement =  0; // Set Default Value
 			$step1 = $step2 = $step3 = $step4 = $step5 = $step6 = 0; // Set Default Value
 			$chartArray = []; // Set Default Value
 			$life_expectancy = 100; // Set Default Value
@@ -121,19 +121,25 @@ class CalculatorController extends Controller {
 			$step6 = $step5 * 12;
 
 			
-			// check annual_gross_drawdown_income change  
-			if($request['CalculateIncome']['annual_gross_drawdown_income'] != 0){
-				$step6 = $request['CalculateIncome']['annual_gross_drawdown_income'];
-			}
+			
 
 			// Return Array to calculater 
 			// Also display final value in GBP format 
-
+			
 			$final_array = [
 				'projected_fund_at_retirement'=> number_format(round($projected_fund_at_retirement)),
-				'potential_annual_gross_drawdown_income'=> round($step6)
+				'potential_annual_gross_drawdown_income'=> round($step6),
+				'annual_gross_drawdown_income' => round($step6)
 				];
 
+			// check annual_gross_drawdown_income change  
+			if($request['CalculateIncome']['annual_gross_drawdown_income'] != 0){
+				$step6 = $request['CalculateIncome']['annual_gross_drawdown_income'];
+				$final_array['annual_gross_drawdown_income'] = $step6;
+			}
+
+			// Find Projected Potential Gross Pension at Retirement
+			$projected_potential_gross_pension_at_retirement = 
 				$chartArray[] = ['Age', 'Fund Value'];
 			for ($i=$retirement_age; $i <= 100 ; $i++) { 
 

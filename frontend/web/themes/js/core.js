@@ -860,14 +860,14 @@ function drawChart() {
                 if (data) {
                     var dataObj = $.parseJSON( data );
                     $('.calculate-income-form span#projected_fund_at_retirement').html(dataObj.projected_fund_at_retirement);
+                    $('.calculate-income-form #calculateincome-annual_gross_drawdown_income').val(dataObj.annual_gross_drawdown_income);
                     //$('.calculate-income-form #calculateincome-annual_gross_drawdown_income').val(dataObj.potential_annual_gross_drawdown_income);
-                    $('.calculate-income-form #calculateincome-annual_gross_drawdown_income').val(0);
                     $('.calculate-income-form span#potential_annual_gross_drawdown_income').html(dataObj.potential_annual_gross_drawdown_income);
 
                     $('.calculate-income-form').find('.projected_fund_at_retirement').show();
                     $('.calculate-income-form').find('.potential_annual_gross_drawdown_income').show();
-                    $('.calculate-income-form').find('.calculateincome-annual_gross_drawdown_income').hide();
-
+                    $('.calculate-income-form').find('.calculateincome-annual_gross_drawdown_income').show();
+                    
                     data = google.visualization.arrayToDataTable(dataObj.chartArray);
                     var chart = new google.visualization.LineChart(document.getElementById('chartContainer'));
                     var options = {
