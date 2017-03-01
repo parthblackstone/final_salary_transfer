@@ -1,5 +1,7 @@
 <?php 
 
+use yii\helpers\Html;
+
 $this->title = $page['page_title'];
 ?>
 
@@ -61,7 +63,7 @@ $this->title = $page['page_title'];
                             <!-- Image -->
                             <div class="image-box text-center">
                                 <div class="image">
-                                    <img src="<?=Yii::$app->homeUrl .'themes/img/members/member01_v.jpg'?>" alt="">
+                                    <?php echo Html::img('@web/themes/img/members/member01_v.jpg',['alt'=>'members']) ?>
                                 </div>
                                 <div class="title">
                                     <a href="#">
@@ -73,7 +75,7 @@ $this->title = $page['page_title'];
                             <!-- Image -->
                             <div class="image-box text-center">
                                 <div class="image">
-                                    <img src="<?=Yii::$app->homeUrl .'themes/img/members/member02_v.jpg'?>" alt="">
+                                    <?php echo Html::img('@web/themes/img/members/member02_v.jpg',['alt'=>'members']) ?>
                                 </div>
                                 <div class="title">
                                     <a href="#">
@@ -85,7 +87,7 @@ $this->title = $page['page_title'];
                             <!-- Image -->
                             <div class="image-box text-center">
                                 <div class="image">
-                                    <img src="<?=Yii::$app->homeUrl .'themes/img/members/member03_v.jpg'?>" alt="">
+                                    <?php echo Html::img('@web/themes/img/members/member03_v.jpg',['alt'=>'members']) ?>
                                 </div>
                                 <div class="title">
                                     <a href="#">

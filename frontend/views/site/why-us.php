@@ -1,6 +1,7 @@
 
 <?php
 /* @var $this yii\web\View */
+use yii\helpers\Html;
 
 $this->title = 'Why Us';
 ?>
@@ -25,7 +26,7 @@ $this->title = 'Why Us';
     <section class="section-image-edge section-lg">
 
     		<div class="image right center col-md-6 col-md-push-6">
-    			<img class="shadow mb-40" src="<?=Yii::$app->homeUrl .'themes/img/photos/consumer_photo03.jpg'?>" alt="">
+    			<?php echo Html::img('@web/themes/img/photos/consumer_photo03.jpg',['alt'=>'consumer_photo03', 'class'=>"shadow mb-40"]) ?>
     		</div>
     		<div class="container">
     			<div class="col-lg-4 col-md-5 content">
@@ -33,7 +34,7 @@ $this->title = 'Why Us';
     				<p class="lead text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
     				<p class="text-muted">Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
     				<strong>Piotr Osmola</strong> - the inventor
-    				<div><img src="<?=Yii::$app->homeUrl .'themes/img/svg/sign01.svg'?>" class="img-rounded mt-30 mb-30" alt=""></div>
+    				<div><?php echo Html::img('@web/themes/img/svg/sign01.svg',['alt'=>'sign01','class'=>"img-rounded mt-30 mb-30"]) ?></div>
     				<a href="#" class="btn btn-filled btn-primary">Learn more <i class="i-after ti-angle-right"></i></a>
     			</div>
     		</div>
@@ -45,7 +46,7 @@ $this->title = 'Why Us';
         <section class="section-image-edge section-lg">
 
     		<div class="image left center col-md-6">
-                <img class="mb-40" src="<?=Yii::$app->homeUrl .'themes/img/photos/stockBroker_photo03.jpg'?>" alt="">
+                <?php echo Html::img('@web/themes/img/photos/stockBroker_photo03.jpg',['alt'=>'stockBroker_photo03.jpg', 'class'=>"mb-40"]) ?>
     		</div>
     		<div class="container">
     			<div class="col-lg-4 col-md-5 col-md-push-7 content">
@@ -53,7 +54,7 @@ $this->title = 'Why Us';
     				<p class="lead text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
     				<p class="text-muted">Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
     				<strong>Piotr Osmola</strong> - the inventor
-    				<div><img src="<?=Yii::$app->homeUrl .'themes/img/svg/sign01.svg'?>" class="img-rounded mt-30 mb-30" alt=""></div>
+    				<div><?php echo Html::img('@web/themes/img/svg/sign01.svg',['alt'=>'sign01','class'=>"img-rounded mt-30 mb-30"]) ?></div>
     				<a href="#" class="btn btn-filled btn-primary">Learn more	<i class="i-after ti-angle-right"></i></a>
     			</div>
     		</div>

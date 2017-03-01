@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
+use yii\helpers\Html;
 
 $this->title = 'Calculators';
 ?>
@@ -9,12 +10,12 @@ $this->title = 'Calculators';
 
       <section id="intro" class="section-image-edge right h-md bg-primary-gradient dark" data-local-scroll="">
 
-            <div class="bg-image bg-multiply" style="background-image: url('themes/img/photos/accountancy_bg01.jpg';);"><img src="themes/img/photos/accountancy_bg01.jpg" alt="" style="display: none;"></div>
-
+            <div class="bg-image bg-multiply" style="background-image: url('themes/img/photos/accountancy_bg01.jpg';);"><?php echo Html::img('@web/themes/img/photos/accountancy_bg01.jpg',['alt'=>'accountancy','style'=>"display:none;"]) ?></div>
+			<?php /*
             <div class="image bottom col-md-6 col-md-push-6 animated hidden-xs hidden-sm fadeInUp visible" data-animation="fadeInUp">
-                <img src="themes/img/photos/accountancy_photo01.png" alt="">
+                <?php echo Html::img('@web/themes/img/photos/accountancy_photo01.jpg',['alt'=>'accountancy']) ?>
             </div>
-
+			*/ ?>
             <div class="container v-center">
                 <div class="row">
                     <div class="col-lg-8 col-lg-push-2">
@@ -40,7 +41,7 @@ $this->title = 'Calculators';
 								<a href="<?=Yii::$app->homeUrl . 'calculator/legacy-planning-calculator'?>" data-title="Image Title" class="btn btn-primary btn-sm">Read More</a>
 							</div>
 							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case01.jpg'?>" data-lightbox="project3a" data-title="Image Title">
-								<img src="<?=Yii::$app->homeUrl .'themes/img/cases/case01.jpg'?>" alt="">
+								<?php echo Html::img('@web/themes/img/cases/case01.jpg',['alt'=>'case']) ?>
 							</a>
 						</div>
 						<div class="title">
@@ -58,7 +59,7 @@ $this->title = 'Calculators';
 								<a href="javascript:void(0);" data-title="Image Title" class="btn btn-primary btn-sm">Read More</a>
 							</div>
 							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case02.jpg'?>" data-lightbox="project3a" data-title="Image Title">
-								<img src="<?=Yii::$app->homeUrl .'themes/img/cases/case02.jpg'?>" alt="">
+								<?php echo Html::img('@web/themes/img/cases/case02.jpg',['alt'=>'case']) ?>
 							</a>
 						</div>
 						<div class="title">
@@ -76,7 +77,7 @@ $this->title = 'Calculators';
 								<a href="javascript:void(0);" data-title="Image Title" class="btn btn-primary btn-sm">Read More</a>
 							</div>
 							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case03.jpg'?>" data-lightbox="project3a" data-title="Image Title">
-								<img src="<?=Yii::$app->homeUrl .'themes/img/cases/case03.jpg'?>" alt="">
+								<?php echo Html::img('@web/themes/img/cases/case03.jpg',['alt'=>'case']) ?>
 							</a>
 						</div>
 						<div class="title">

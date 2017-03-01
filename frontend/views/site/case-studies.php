@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
+use yii\helpers\Html;
 
 $this->title = 'Case Studies';
 ?>
@@ -43,7 +44,7 @@ $this->title = 'Case Studies';
     					<!-- Image -->
     					<div class="image-box image-hover text-center">
     						<div class="image">
-    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case01.jpg'?>" data-lightbox="gallery" data-title="Image Title"><img src="<?=Yii::$app->homeUrl .'themes/img/cases/case01.jpg'?>" alt=""></a>
+    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case01.jpg'?>" data-lightbox="gallery" data-title="Image Title"><?php echo Html::img('@web/themes/img/cases/case01.jpg',['alt'=>'case']) ?></a>
     						</div>
     						<div class="title">
     							<a href="#">
@@ -57,7 +58,7 @@ $this->title = 'Case Studies';
     					<!-- Image -->
     					<div class="image-box image-hover text-center">
     						<div class="image">
-    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case04.jpg'?>" data-lightbox="gallery" data-title="Image Title"><img src="<?=Yii::$app->homeUrl .'themes/img/cases/case04.jpg'?>" alt=""></a>
+    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case04.jpg'?>" data-lightbox="gallery" data-title="Image Title"><?php echo Html::img('@web/themes/img/cases/case04.jpg',['alt'=>'case']) ?></a>
     						</div>
     						<div class="title">
     							<a href="#">
@@ -71,7 +72,7 @@ $this->title = 'Case Studies';
     					<!-- Image -->
     					<div class="image-box image-hover text-center">
     						<div class="image">
-    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case02.jpg'?>" data-lightbox="gallery" data-title="Image Title"><img src="<?=Yii::$app->homeUrl .'themes/img/cases/case02.jpg'?>" alt=""></a>
+    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case02.jpg'?>" data-lightbox="gallery" data-title="Image Title"><?php echo Html::img('@web/themes/img/cases/case02.jpg',['alt'=>'case']) ?></a>
     						</div>
     						<div class="title">
     							<a href="#">
@@ -85,7 +86,7 @@ $this->title = 'Case Studies';
     					<!-- Image -->
     					<div class="image-box image-hover text-center">
     						<div class="image">
-    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case05.jpg'?>" data-lightbox="gallery" data-title="Image Title"><img src="<?=Yii::$app->homeUrl .'themes/img/cases/case05.jpg'?>" alt=""></a>
+    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case05.jpg'?>" data-lightbox="gallery" data-title="Image Title"><?php echo Html::img('@web/themes/img/cases/case05.jpg',['alt'=>'case']) ?></a>
     						</div>
     						<div class="title">
     							<a href="#">
@@ -99,7 +100,7 @@ $this->title = 'Case Studies';
     					<!-- Image -->
     					<div class="image-box image-hover text-center">
     						<div class="image">
-    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case03.jpg'?>" data-lightbox="gallery" data-title="Image Title"><img src="<?=Yii::$app->homeUrl .'themes/img/cases/case03.jpg'?>" alt=""></a>
+    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case03.jpg'?>" data-lightbox="gallery" data-title="Image Title"><?php echo Html::img('@web/themes/img/cases/case03.jpg',['alt'=>'case']) ?></a>
     						</div>
     						<div class="title">
     							<a href="#">
@@ -113,7 +114,7 @@ $this->title = 'Case Studies';
     					<!-- Image -->
     					<div class="image-box image-hover text-center">
     						<div class="image">
-    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case06.jpg'?>" data-lightbox="gallery" data-title="Image Title"><img src="<?=Yii::$app->homeUrl .'themes/img/cases/case06.jpg'?>" alt=""></a>
+    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case06.jpg'?>" data-lightbox="gallery" data-title="Image Title"><?php echo Html::img('@web/themes/img/cases/case06.jpg',['alt'=>'case']) ?></a>
     						</div>
     						<div class="title">
                                 <a href="#">

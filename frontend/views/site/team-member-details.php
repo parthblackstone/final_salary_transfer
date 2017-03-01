@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\ContactForm */
+use yii\helpers\Html;
 
 $this->title = 'About Me';
 $this->params['breadcrumbs'][] = $this->title;
@@ -33,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <!-- Section / Double -->
         <section class="section-double left">
             <div class="image col-md-6">
-                <div class="bg-image"><img src="<?=Yii::$app->homeUrl . 'themes/img/photos/member_photo01.jpg'?>" alt=""></div>
+                <div class="bg-image"><?php echo Html::img('@web/themes/photos/member_photo01.jpg',['alt'=>'member']) ?></div>
             </div>
             <div class="content col-md-6">
                 <h1 class="mb-0">Mike Kowalski</h1>
@@ -69,7 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <!-- Section / Double -->
         <section class="section-double right">
             <div class="image col-md-6">
-                <div class="bg-image"><img src="<?=Yii::$app->homeUrl . 'themes/img/photos/accountancy_counter01.jpg'?>" alt=""></div>
+                <div class="bg-image"><?php echo Html::img('@web/themes/photos/accountancy_counter01.jpg',['alt'=>'member']) ?></div>
             </div>
             <div class="content col-md-6">
                 <h5 class="mb-60">What do I do?</h5>
@@ -105,7 +106,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <!-- Section / Double -->
         <section class="section-double left">
             <div class="image col-md-6">
-                <div class="bg-image"><img src="<?=Yii::$app->homeUrl . 'themes/img/photos/member_photo03.jpg'?>" alt=""></div>
+                <div class="bg-image"><?php echo Html::img('@web/themes/photos/member_photo03.jpg',['alt'=>'member']) ?></div>
             </div>
             <div class="content col-md-6">
                 <h5 class="mb-60">My Skills</h5>
@@ -133,7 +134,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <!-- Section / Double -->
         <section class="section-double right">
             <div class="image col-md-6">
-                <div class="bg-image"><img src="<?=Yii::$app->homeUrl . 'themes/img/photos/member_photo04.jpg'?>" alt=""></div>
+                <div class="bg-image"><?php echo Html::img('@web/themes/photos/member_photo04.jpg',['alt'=>'member']) ?></div>
             </div>
             <div class="content col-md-6">
                 <h5 class="mb-60">My Experience</h5>

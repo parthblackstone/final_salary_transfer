@@ -1,3 +1,6 @@
+<?php 
+use yii\helpers\Html;
+?>
 <!-- Footer -->
     <footer id="footer" class="dark bg-dark">
         
@@ -52,7 +55,7 @@
                             <!-- Widget - Contact -->
                             <div class="widget widget-contact">
                                 <h5 class="text-muted">Contact Us</h5>
-                                <img src="themes/img/photos/location_min.jpg" alt="" class="img-rounded mb-20">
+                                <?php echo Html::img('@web/themes/img/photos/location_min.jpg',['alt'=>'location','class'=>"img-rounded mb-20"]) ?>
                                 <address>
                                     <span class="text-muted">Address:</span><br>
                                     A795 Folsom Ave, Suite 600<br>

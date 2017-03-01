@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
+use yii\helpers\Html;
 
 $this->title = 'Our Financial Advisors';
 ?>
@@ -33,7 +34,7 @@ $this->title = 'Our Financial Advisors';
                     <div class="col-sm-4">
                         <!-- Member -->
                         <div class="member member-1">
-                            <img src="<?=Yii::$app->homeUrl .'themes/img/members/member01_v.jpg'?>" alt="">
+                            <?php echo Html::img('@web/themes/img/members/member01_v.jpg',['alt'=>'members']) ?>
                             <div class="member-content">
                                 <a href="<?=Yii::$app->homeUrl . 'site/about-me'?>">
                                     <h5>Maria Kovalska</h5>
@@ -45,7 +46,7 @@ $this->title = 'Our Financial Advisors';
                     <div class="col-sm-4">
                         <!-- Member -->
                         <div class="member member-1">
-                            <img src="<?=Yii::$app->homeUrl .'themes/img/members/member02_v.jpg'?>" alt="">
+                            <?php echo Html::img('@web/themes/img/members/member02_v.jpg',['alt'=>'members']) ?>
                             <div class="member-content">
                                 <a href="<?=Yii::$app->homeUrl . 'site/about-me'?>">
                                     <h5>Thomas Novak</h5>
@@ -57,7 +58,7 @@ $this->title = 'Our Financial Advisors';
                     <div class="col-sm-4">
                         <!-- Member -->
                         <div class="member member-1">
-                            <img src="<?=Yii::$app->homeUrl .'themes/img/members/member03_v.jpg'?>" alt="">
+                            <?php echo Html::img('@web/themes/img/members/member03_v.jpg',['alt'=>'members']) ?>
                             <div class="member-content">
                                 <a href="<?=Yii::$app->homeUrl . 'site/about-me'?>">
                                     <h5>George Majka</h5>
