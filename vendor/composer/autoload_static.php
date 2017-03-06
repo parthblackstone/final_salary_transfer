@@ -9,8 +9,8 @@ class ComposerStaticInit2898196b1d25da8956fd34d95bdc046f
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
-        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '180092cfc969a12e06f2132a203a3184' => __DIR__ . '/..' . '/codeception/verify/src/Codeception/function.php',
     );
 
@@ -29,6 +29,10 @@ class ComposerStaticInit2898196b1d25da8956fd34d95bdc046f
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
+        ),
+        'm' => 
+        array (
+            'monitorbacklinks\\yii2wp\\' => 24,
         ),
         'c' => 
         array (
@@ -54,6 +58,10 @@ class ComposerStaticInit2898196b1d25da8956fd34d95bdc046f
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+        ),
+        'H' => 
+        array (
+            'HieuLe\\WordpressXmlrpcClient\\' => 29,
         ),
         'G' => 
         array (
@@ -114,6 +122,10 @@ class ComposerStaticInit2898196b1d25da8956fd34d95bdc046f
             1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
         ),
+        'monitorbacklinks\\yii2wp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monitorbacklinks/yii2-wordpress',
+        ),
         'cebe\\markdown\\' => 
         array (
             0 => __DIR__ . '/..' . '/cebe/markdown',
@@ -165,6 +177,10 @@ class ComposerStaticInit2898196b1d25da8956fd34d95bdc046f
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'HieuLe\\WordpressXmlrpcClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hieu-le/wordpress-xmlrpc-client/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
@@ -535,6 +551,7 @@ class ComposerStaticInit2898196b1d25da8956fd34d95bdc046f
         'PHP_Token_NEW' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_NS_C' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_NS_SEPARATOR' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'PHP_Token_NULLSAFE_OBJECT_OPERATOR' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_NUM_STRING' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_OBJECT_CAST' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_OBJECT_OPERATOR' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',

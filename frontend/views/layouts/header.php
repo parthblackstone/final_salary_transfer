@@ -1,3 +1,6 @@
+ <?php 
+use yii\helpers\Html;
+?>
  <!-- Header -->
     <header id="header" class="fullwidth absolute light"> <!-- transparent-->
         
@@ -25,25 +28,28 @@
                     <nav id="main-menu">
                         <ul id="nav-primary" class="nav nav-primary">
                             <li> <!-- class="has-dropdown" -->
-                                <a href="<?=Yii::$app->homeUrl?>">Home</a>
+                                <?= Html::a('Home', Yii::$app->homeUrl)?>
                             </li>
                             <li> <!-- class="has-dropdown" -->
-                                <a href="<?=Yii::$app->homeUrl . 'site/who-we-are'?>">Who we are</a>
+                                <?= Html::a('Who we are', ['site/who-we-are'])?>
                             </li>
                             <li> <!-- class="has-dropdown" -->
-                                <a href="<?=Yii::$app->homeUrl . 'site/why-us'?>">Why us</a>
+                                <?= Html::a('Why Us', ['site/why-us'])?>
                             </li>
                             <li> <!-- class="has-dropdown" -->
-                                <a href="<?=Yii::$app->homeUrl . 'site/calculators'?>">Calculators</a>
+                                <?= Html::a('Calculators', ['site/calculators'])?>
                             </li>
                             <li> <!-- class="has-dropdown" -->
-                                <a href="<?=Yii::$app->homeUrl . 'site/case-studies'?>">Case studies</a>
+                                <?= Html::a('Case Studies', ['site/case-studies'])?>
+                            </li>
+                            <li> <!-- class="has-dropdown" -->
+                                <?= Html::a('Blog', ['blog/index'])?>
                             </li>
                             <li class="has-dropdown"> <!-- class="has-dropdown" -->
                                 <a href="javascript:void(0)">Enqueries/Contact</a>
                                 <ul>
-                                    <li><a href="<?=Yii::$app->homeUrl . 'site/contact?office=London'?>">London Office</a></li>
-                                    <li><a href="<?=Yii::$app->homeUrl . 'site/contact?office=Essex'?>">Essex Office</a></li>
+                                    <li><?= Html::a('London Office', ['site/contact', 'office'=>'London'])?></li>
+                                    <li><?= Html::a('Essex Office', ['site/contact', 'office'=>'Essex'])?></li>
                                 </ul>
                             </li>
                         </ul>

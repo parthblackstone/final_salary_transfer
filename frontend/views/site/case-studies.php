@@ -14,8 +14,8 @@ $this->title = 'Case Studies';
             </div>
             <div class="col-md-6">
                 <ol class="breadcrumb">
-                    <li><a href="<?=Yii::$app->homeUrl?>">Home Page</a></li>
-                    <li class="active"><?=$this->title;?></li>
+                    <li><?= Html::a('Home Page', Yii::$app->homeUrl) ?></li>
+					<li class="active"><?=$this->title;?></li>
                 </ol>
             </div>
         </div>
@@ -32,9 +32,9 @@ $this->title = 'Case Studies';
     			<nav class="text-center">
                     <ul class="nav nav-pills filter-isotope mb-50 text-center" data-filter-list="#works-list">
                         <li class="active"><a href="#" data-filter="*"><i class="pe-7s-folder"></i>All</a></li>
-                        <li><a href="#" data-filter=".filter-investments"><i class="pe-7s-graph1"></i>Investments</a></li>
-                        <li><a href="#" data-filter=".filter-financeAdvising"><i class="pe-7s-comment"></i>Finance Advising</a></li>
-                        <li><a href="#" data-filter=".filter-insurance"><i class="pe-7s-like"></i>Insurance</a></li>
+                        <li><?= Html::a('<i class="pe-7s-graph1"></i>Investments', '#', ['data-filter'=>'.filter-investments']) ?></li>
+						<li><?= Html::a('<i class="pe-7s-comment"></i>Finance Advising', '#', ['data-filter'=>'.filter-financeAdvising']) ?></li>
+                        <li><?= Html::a('<i class="pe-7s-like"></i>Insurance', '#', ['data-filter'=>'.filter-insurance']) ?></li>
                     </ul>         
                 </nav>
 
@@ -43,85 +43,43 @@ $this->title = 'Case Studies';
     				<div class="masonry-item filter-investments col-md-4 col-sm-6 col-xs-12" style="position: absolute; left: 0%; top: 0px;">
     					<!-- Image -->
     					<div class="image-box image-hover text-center">
-    						<div class="image">
-    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case01.jpg'?>" data-lightbox="gallery" data-title="Image Title"><?php echo Html::img('@web/themes/img/cases/case01.jpg',['alt'=>'case']) ?></a>
-    						</div>
-    						<div class="title">
-    							<a href="#">
-                                    <h6 class="mb-0">Navigation App</h6>
-                                    <span class="text-muted">Investments</span>
-                                </a>
-    						</div>
+    						<?= Html::tag('div', Html::a(Html::img('@web/themes/img/cases/case01.jpg',['alt'=>'case']), 'javascript:void(0);', ['data-lightbox'=>'gallery', 'data-title'=>"Image Title"]), ['class'=>'image']);?>
+    						<?= Html::tag('div', Html::a('<h6 class="mb-0">Navigation App</h6><span class="text-muted">Investments</span>', 'javascript:void(0);'), ['class'=>'title']);?>
     					</div>
     				</div>
     				<div class="masonry-item filter-insurance col-md-4 col-sm-6 col-xs-12" style="position: absolute; left: 33.3333%; top: 0px;">
     					<!-- Image -->
     					<div class="image-box image-hover text-center">
-    						<div class="image">
-    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case04.jpg'?>" data-lightbox="gallery" data-title="Image Title"><?php echo Html::img('@web/themes/img/cases/case04.jpg',['alt'=>'case']) ?></a>
-    						</div>
-    						<div class="title">
-    							<a href="#">
-                                    <h6 class="mb-0">Family Disease</h6>
-                                    <span class="text-muted">Insurance</span>
-                                </a>
-    						</div>
+    						<?= Html::tag('div', Html::a(Html::img('@web/themes/img/cases/case04.jpg',['alt'=>'case']), 'javascript:void(0);', ['data-lightbox'=>'gallery', 'data-title'=>"Image Title"]), ['class'=>'image']);?>
+    						<?= Html::tag('div', Html::a('<h6 class="mb-0">Family Disease</h6><span class="text-muted">Insurance</span>', 'javascript:void(0);'), ['class'=>'title']);?>
     					</div>
     				</div>
     				<div class="masonry-item filter-investments col-md-4 col-sm-6 col-xs-12" style="position: absolute; left: 66.6667%; top: 0px;">
     					<!-- Image -->
     					<div class="image-box image-hover text-center">
-    						<div class="image">
-    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case02.jpg'?>" data-lightbox="gallery" data-title="Image Title"><?php echo Html::img('@web/themes/img/cases/case02.jpg',['alt'=>'case']) ?></a>
-    						</div>
-    						<div class="title">
-    							<a href="#">
-                                    <h6 class="mb-0">Games Service</h6>
-                                    <span class="text-muted">Investments</span>
-                                </a>
-    						</div>
+    						<?= Html::tag('div', Html::a(Html::img('@web/themes/img/cases/case02.jpg',['alt'=>'case']), 'javascript:void(0);', ['data-lightbox'=>'gallery', 'data-title'=>"Image Title"]), ['class'=>'image']);?>
+    						<?= Html::tag('div', Html::a('<h6 class="mb-0">Games Service</h6><span class="text-muted">Investments</span>', 'javascript:void(0);'), ['class'=>'title']);?>
     					</div>
     				</div>
     				<div class="masonry-item filter-insurance col-md-4 col-sm-6 col-xs-12" style="position: absolute; left: 0%; top: 493px;">
     					<!-- Image -->
     					<div class="image-box image-hover text-center">
-    						<div class="image">
-    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case05.jpg'?>" data-lightbox="gallery" data-title="Image Title"><?php echo Html::img('@web/themes/img/cases/case05.jpg',['alt'=>'case']) ?></a>
-    						</div>
-    						<div class="title">
-    							<a href="#">
-                                    <h6 class="mb-0">Ambers's Life</h6>
-                                    <span class="text-muted">Insurance</span>
-                                </a>
-    						</div>
+    						<?= Html::tag('div', Html::a(Html::img('@web/themes/img/cases/case05.jpg',['alt'=>'case']), 'javascript:void(0);', ['data-lightbox'=>'gallery', 'data-title'=>"Image Title"]), ['class'=>'image']);?>
+    						<?= Html::tag('div', Html::a("<h6 class='mb-0'>Ambers's Life</h6><span class='text-muted'>Insurance</span>", 'javascript:void(0);'), ['class'=>'title']);?>
     					</div>
     				</div>
     				<div class="masonry-item filter-investments col-md-4 col-sm-6 col-xs-12" style="position: absolute; left: 33.3333%; top: 493px;">
     					<!-- Image -->
     					<div class="image-box image-hover text-center">
-    						<div class="image">
-    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case03.jpg'?>" data-lightbox="gallery" data-title="Image Title"><?php echo Html::img('@web/themes/img/cases/case03.jpg',['alt'=>'case']) ?></a>
-    						</div>
-    						<div class="title">
-    							<a href="#">
-                                    <h6 class="mb-0">Music App</h6>
-                                    <span class="text-muted">Investments</span>
-                                </a>
-    						</div>
+    						<?= Html::tag('div', Html::a(Html::img('@web/themes/img/cases/case03.jpg',['alt'=>'case']), 'javascript:void(0);', ['data-lightbox'=>'gallery', 'data-title'=>"Image Title"]), ['class'=>'image']);?>
+    						<?= Html::tag('div', Html::a("<h6 class='mb-0'>Music App</h6><span class='text-muted'>Investments</span>", 'javascript:void(0);'), ['class'=>'title']);?>
     					</div>
     				</div>
     				<div class="masonry-item filter-financeAdvising col-md-4 col-sm-6 col-xs-12" style="position: absolute; left: 66.6667%; top: 493px;">
     					<!-- Image -->
     					<div class="image-box image-hover text-center">
-    						<div class="image">
-    							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case06.jpg'?>" data-lightbox="gallery" data-title="Image Title"><?php echo Html::img('@web/themes/img/cases/case06.jpg',['alt'=>'case']) ?></a>
-    						</div>
-    						<div class="title">
-                                <a href="#">
-                                    <h6 class="mb-0">Music Life</h6>
-                                    <span class="text-muted">Finance Advising</span>
-                                </a>
-    						</div>
+    						<?= Html::tag('div', Html::a(Html::img('@web/themes/img/cases/case06.jpg',['alt'=>'case']), 'javascript:void(0);', ['data-lightbox'=>'gallery', 'data-title'=>"Image Title"]), ['class'=>'image']);?>
+    						<?= Html::tag('div', Html::a("<h6 class='mb-0'>Music Life</h6><span class='text-muted'>Finance Advising</span>", 'javascript:void(0);'), ['class'=>'title']);?>
     					</div>
     				</div>
     			</div>

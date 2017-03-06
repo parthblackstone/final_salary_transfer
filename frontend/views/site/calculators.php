@@ -38,16 +38,12 @@ $this->title = 'Calculators';
 					<div class="image-box image-hover text-center">
 						<div class="image">
 							<div class="hover">
-								<a href="<?=Yii::$app->homeUrl . 'calculator/legacy-planning-calculator'?>" data-title="Image Title" class="btn btn-primary btn-sm">Read More</a>
+								<?= Html::a('Read More', ['calculator/legacy-planning-calculator'], ['class' => 'btn btn-primary btn-sm','data-title'=>'Image Title']) ?>
 							</div>
-							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case01.jpg'?>" data-lightbox="project3a" data-title="Image Title">
-								<?php echo Html::img('@web/themes/img/cases/case01.jpg',['alt'=>'case']) ?>
-							</a>
+							<?= Html::a(Html::img('@web/themes/img/cases/case01.jpg',['alt'=>'case']), ['calculator/legacy-planning-calculator'], ['data-lightbox'=>'project3a','data-title'=>"Image Title"]) ?>
 						</div>
 						<div class="title">
-							<a href="<?=Yii::$app->homeUrl . 'calculator/legacy-planning-calculator'?>"  data-title="Image Title">
-								<h5 class="mb-0">Legacy Planning Calculator</h5>
-							</a>
+							<?= Html::a('<h5 class="mb-0">Legacy Planning Calculator</h5>', ['calculator/legacy-planning-calculator'], ['data-title'=>"Image Title"]) ?>
 						</div>
 					</div>
 				</div>
@@ -56,16 +52,12 @@ $this->title = 'Calculators';
 					<div class="image-box image-hover text-center">
 						<div class="image">
 							<div class="hover">
-								<a href="javascript:void(0);" data-title="Image Title" class="btn btn-primary btn-sm">Read More</a>
+								<?= Html::a('Read More', 'javascript:void(0);', ['class'=>"btn btn-primary btn-sm",'data-title'=>"Image Title"]) ?>
 							</div>
-							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case02.jpg'?>" data-lightbox="project3a" data-title="Image Title">
-								<?php echo Html::img('@web/themes/img/cases/case02.jpg',['alt'=>'case']) ?>
-							</a>
+							<?= Html::a(Html::img('@web/themes/img/cases/case02.jpg',['alt'=>'case']), 'javascript:void(0);', ['data-lightbox'=>"project3a",'data-title'=>"Image Title"]) ?>
 						</div>
 						<div class="title">
-							<a href="javascript:void(0);"  data-title="Image Title">
-								<h5 class="mb-0">Income Drawdown Calculator</h5>
-							</a>
+							<?= Html::a('<h5 class="mb-0">Income Drawdown Calculator</h5>', 'javascript:void(0);', ['data-title'=>"Image Title"]) ?>
 						</div>
 					</div>
 				</div>
@@ -74,16 +66,12 @@ $this->title = 'Calculators';
 					<div class="image-box image-hover text-center">
 						<div class="image">
 							<div class="hover">
-								<a href="javascript:void(0);" data-title="Image Title" class="btn btn-primary btn-sm">Read More</a>
+								<?= Html::a('Read More', 'javascript:void(0);', ['class'=>"btn btn-primary btn-sm",'data-title'=>"Image Title"]) ?>
 							</div>
-							<a href="<?=Yii::$app->homeUrl .'themes/img/cases/case03.jpg'?>" data-lightbox="project3a" data-title="Image Title">
-								<?php echo Html::img('@web/themes/img/cases/case03.jpg',['alt'=>'case']) ?>
-							</a>
+							<?= Html::a(Html::img('@web/themes/img/cases/case03.jpg',['alt'=>'case']), 'javascript:void(0);', ['data-lightbox'=>"project3a",'data-title'=>"Image Title"]) ?>
 						</div>
 						<div class="title">
-							<a href="javascript:void(0);" data-title="Image Title">
-								<h5 class="mb-0">Tax Efficient Income Withdrwal Calculator</h5>
-							</a>
+							<?= Html::a('<h5 class="mb-0">Tax Efficient Income Withdrwal Calculator</h5>', 'javascript:void(0);', ['data-title'=>"Image Title"]) ?>
 						</div>
 					</div>
 				</div>

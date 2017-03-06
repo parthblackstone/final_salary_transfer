@@ -39,15 +39,6 @@ return array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
-  'yiisoft/yii2-debug' => 
-  array (
-    'name' => 'yiisoft/yii2-debug',
-    'version' => '2.0.8.0',
-    'alias' => 
-    array (
-      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
-    ),
-  ),
   'yii2mod/yii2-google-maps-markers' => 
   array (
     'name' => 'yii2mod/yii2-google-maps-markers',
@@ -55,6 +46,24 @@ return array (
     'alias' => 
     array (
       '@yii2mod/google/maps/markers' => $vendorDir . '/yii2mod/yii2-google-maps-markers',
+    ),
+  ),
+  'yiisoft/yii2-debug' => 
+  array (
+    'name' => 'yiisoft/yii2-debug',
+    'version' => '2.0.9.0',
+    'alias' => 
+    array (
+      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
+    ),
+  ),
+  'monitorbacklinks/yii2-wordpress' => 
+  array (
+    'name' => 'monitorbacklinks/yii2-wordpress',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@monitorbacklinks/yii2wp' => $vendorDir . '/monitorbacklinks/yii2-wordpress',
     ),
   ),
 );

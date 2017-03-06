@@ -5,7 +5,19 @@ use yii\helpers\Html;
 
 $this->title = 'Final Salary Transfer';
 ?>
+<?php 
+    $blogPosts = Yii::$app->blog->getPosts([
+        'post_status' => 'publish',
+    ], ['post_title', 'post_thumbnail']);
 
+    $blogPost = Yii::$app->blog->getPost(8, ['post_title', 'post_content','post_thumbnail']);
+echo "<pre>";
+
+print_r($blogPosts);
+echo "single";
+print_r($blogPost);
+exit;
+?>
 <!-- Content -->
     <div id="content">
         <section id="stats" class="cover text-center">
@@ -13,35 +25,19 @@ $this->title = 'Final Salary Transfer';
                 <div class="row row-color dark">
                     <div class="col-xs-3">
                         <!-- Counter -->
-                        <div class="counter counter-3 counter-3-3">
-                            <!--<span class="icon icon-default"><i class="pe-7s-diamond"></i></span>-->
-                            <span class="number">+18.00</span>
-                            <h4 class="text-muted">Happy Clients</h4>
-                        </div>
+                        <?= Html::tag('div', '<span class="number">+18.00</span><h4 class="text-muted">Happy Clients</h4>', ['class'=>'counter counter-3 counter-3-3']);?>
                     </div>
                     <div class="col-xs-3">
                         <!-- Counter -->
-                        <div class="counter counter-3 counter-3-3">
-                            <!--<span class="icon icon-default"><i class="pe-7s-clock"></i></span>-->
-                            <span class="number">15</span>
-                            <h4 class="text-muted">Years of experience</h4>
-                        </div>
+                        <?= Html::tag('div', '<span class="number">15</span><h4 class="text-muted">Years of experience</h4>', ['class'=>'counter counter-3 counter-3-3']);?>
                     </div>
                     <div class="col-xs-3">
                         <!-- Counter -->
-                        <div class="counter counter-3 counter-3-3">
-                            <!--<span class="icon icon-default"><i class="pe-7s-medal"></i></span>-->
-                            <span class="number">25</span>
-                            <h4 class="text-muted">Professional Team</h4>
-                        </div>
+                        <?= Html::tag('div', '<span class="number">25</span><h4 class="text-muted">Professional Team</h4>', ['class'=>'counter counter-3 counter-3-3']);?>
                     </div>
                     <div class="col-xs-3">
                         <!-- Counter -->
-                        <div class="counter counter-3 counter-3-3">
-                            <!--<span class="icon icon-default"><i class="pe-7s-medal"></i></span>-->
-                            <span class="number">25</span>
-                            <h4 class="text-muted">Professional Team</h4>
-                        </div>
+                        <?= Html::tag('div', '<span class="number">25</span><h4 class="text-muted">Professional Team</h4>', ['class'=>'counter counter-3 counter-3-3']);?>
                     </div>
                 </div>
             </div>
@@ -59,23 +55,11 @@ $this->title = 'Final Salary Transfer';
                 <div class="col-md-6 animated" data-animation="fadeIn">
                     <div class="carousel" data-single-item data-pagination data-navigation data-autoplay="4000" data-transition="fade">
                         <!-- Slide -->
-                        <div class="slide">
-                            <h5 class="text-muted">Accountancy Services</h5>
-                            <h1>We will <em>take care</em> about your finances</h1>
-                            <a href="<?=Yii::$app->homeUrl . 'site/pages?page=page-trust'?>" class="btn btn-ghost">Read More</a>
-                        </div>
+                        <?= Html::tag('div', '<h5 class="text-muted">Accountancy Services</h5><h1>We will <em>take care</em> about your finances</h1>'. Html::a('Read More', ['site/pages','page'=>'page-trust'],['class'=>"btn btn-ghost"]), ['class'=>'slide']);?>
                         <!-- Slide -->
-                        <div class="slide">
-                            <h5 class="text-muted">Finance Advising</h5>
-                            <h1>Make your <em>future</em> financially safe</h1>
-                            <a href="<?=Yii::$app->homeUrl . 'site/pages?page=page-whyme'?>" class="btn btn-ghost">Read More</a>
-                        </div>
+                        <?= Html::tag('div', '<h5 class="text-muted">Finance Advising</h5><h1>Make your <em>future</em> financially safe</h1>'.Html::a('Read More', ['site/pages','page'=>'page-whyme'],['class'=>"btn btn-ghost"]), ['class'=>'slide']);?>
                         <!-- Slide -->
-                        <div class="slide">
-                            <h5 class="text-muted">DB Tranfer</h5>
-                            <h1>Defined benefit <em>pension</em> transfer</h1>
-                            <a href="<?=Yii::$app->homeUrl . 'site/pages?page=defined-benefit-pension-transfer'?>" class="btn btn-ghost">Read More</a>
-                        </div>
+                        <?= Html::tag('div', '<h5 class="text-muted">DB Tranfer</h5><h1>Defined benefit <em>pension</em> transfer</h1>'. Html::a('Read More', ['site/pages','page'=>'defined-benefit-pension-transfer'],['class'=>"btn btn-ghost"]), ['class'=>'slide']);?>
                     </div>
                 </div>
             </div>

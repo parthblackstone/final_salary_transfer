@@ -48,12 +48,32 @@ return [
 		],
 
 		'urlManager' => [
+			//'class'=>'yii\web\UrlManager',//Set class
 			'baseUrl' => $baseUrl,
 			'enablePrettyUrl' => true,
 			'showScriptName' => false,
+			//'enableStrictParsing' => true,
 			'rules' => [
+				
 			],
+			
 		],
+
+		'blog' => [
+            'class' => '\monitorbacklinks\yii2wp\Wordpress',
+            'endpoint' => 'http://localhost/finalsalarytransfer_blog/xmlrpc.php',
+            'username' => 'parthshah',
+            'password' => 'parth@0102'
+        ],
+		'log' => [
+            'targets' => [
+                'file' => [
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['error'],
+                    'categories' => ['monitorbacklinks\yii2wp\Wordpress::*'],
+                ],
+            ],
+        ],
 
 	],
 	'params' => $params,
