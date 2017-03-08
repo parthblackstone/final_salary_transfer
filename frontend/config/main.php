@@ -48,15 +48,17 @@ return [
 		],
 
 		'urlManager' => [
-			//'class'=>'yii\web\UrlManager',//Set class
-			'baseUrl' => $baseUrl,
-			'enablePrettyUrl' => true,
-			'showScriptName' => false,
-			//'enableStrictParsing' => true,
-			'rules' => [
-				
-			],
-			
+            'baseUrl' => $baseUrl,
+            'class' => 'yii\web\UrlManager',
+            // Disable index.php
+            'showScriptName' => false,
+            // Disable r= routes
+            'enablePrettyUrl' => true,
+            'rules' => array(
+					'site/pages/<page>' => 'site/pages',
+                    'site/contact/<office>' => 'site/contact',
+					'blog/single-post/<id>/<post_name>' => 'blog/single-post',
+           ),
 		],
 
 		'blog' => [

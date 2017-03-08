@@ -5,19 +5,7 @@ use yii\helpers\Html;
 
 $this->title = 'Final Salary Transfer';
 ?>
-<?php 
-    $blogPosts = Yii::$app->blog->getPosts([
-        'post_status' => 'publish',
-    ], ['post_title', 'post_thumbnail']);
 
-    $blogPost = Yii::$app->blog->getPost(8, ['post_title', 'post_content','post_thumbnail']);
-echo "<pre>";
-
-print_r($blogPosts);
-echo "single";
-print_r($blogPost);
-exit;
-?>
 <!-- Content -->
     <div id="content">
         <section id="stats" class="cover text-center">
@@ -75,7 +63,7 @@ exit;
                         <!-- Feature -->
                         <div class="feature feature-1 feature-lg boxed bg-light animated fadeInUp visible cursor-pointer" data-animation="fadeInUp" data-toggle="side-panel">
                             <span class="icon icon-white icon-circle icon-lg"><i class="pe-7s-graph1"></i></span>
-                            <h5>Legacy Planning</h5>
+                            <h5>Flexibility</h5>
                             <p class="text-muted">Quisque ac augue vitae lorem mollis tempor. Vivamus laoreet, dolor et commodo molestie.</p>
                         </div>
                     </div>
@@ -83,7 +71,7 @@ exit;
                         <!-- Feature -->
                         <div class="feature feature-1 feature-lg boxed bg-light animated fadeInUp visible cursor-pointer" data-animation="fadeInUp" data-toggle="side-panel">
                             <span class="icon icon-white icon-circle icon-lg"><i class="pe-7s-graph1"></i></span>
-                            <h5>Control On Income</h5>
+                            <h5>Potential for access to more tax-free cash</h5>
                             <p class="text-muted">Quisque ac augue vitae lorem mollis tempor. Vivamus laoreet, dolor et commodo molestie.</p>
                         </div>
                     </div>
@@ -91,7 +79,7 @@ exit;
                         <!-- Feature -->
                         <div class="feature feature-1 feature-lg boxed bg-light animated fadeInUp visible cursor-pointer" data-animation="fadeInUp" data-animation-delay="200" data-toggle="side-panel">
                             <span class="icon icon-white icon-circle icon-lg"><i class="pe-7s-chat"></i></span>
-                            <h5>Control On Investments</h5>
+                            <h5>Inheritance</h5>
                             <p class="text-muted">Quisque ac augue vitae lorem mollis tempor. Vivamus laoreet, dolor et commodo molestie.</p>
                         </div>
                     </div>
@@ -99,44 +87,13 @@ exit;
                         <!-- Feature -->
                         <div class="feature feature-1 feature-lg boxed bg-light animated fadeInUp visible cursor-pointer" data-animation="fadeInUp" data-animation-delay="200" data-toggle="side-panel">
                             <span class="icon icon-white icon-circle icon-lg"><i class="pe-7s-chat"></i></span>
-                           <h5>Tax planning</h5>
+                           <h5>Concerns about the solvency of the sponsoring employer</h5>
                             <p class="text-muted">Quisque ac augue vitae lorem mollis tempor. Vivamus laoreet, dolor et commodo molestie.</p>
                         </div>
                     </div>
                 <!--</div>-->
             </div>
 
-        </section>
-
-        <section id="stats" class="cover text-center">
-            <div class="container-fluid">
-                <div class="row row-color dark">
-                    <div class="col-sm-4">
-                        <!-- Counter -->
-                        <div class="counter counter-2">
-                            <span class="icon icon-default"><i class="pe-7s-diamond"></i></span>
-                            <span class="number">+18.00</span>
-                            <h4 class="text-muted">Happy Clients</h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <!-- Counter -->
-                        <div class="counter counter-2">
-                            <span class="icon icon-default"><i class="pe-7s-clock"></i></span>
-                            <span class="number">15</span>
-                            <h4 class="text-muted">Years of experience</h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <!-- Counter -->
-                        <div class="counter counter-2">
-                            <span class="icon icon-default"><i class="pe-7s-medal"></i></span>
-                            <span class="number">25</span>
-                            <h4 class="text-muted">Professional Team</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <section id="about" class="ssection-xs bg-light text-center">
@@ -218,25 +175,71 @@ exit;
     	</section>
         <!-- Side Panel -->
         <nav id="side-panel" class="right bg-dark dark">
-            <div class="side-panel-wrapper side-panel-wrapper-remove-width">
+            <div class="side-panel-wrapper-remove-width"><!-- side-panel-wrapper -->
                 <!-- Section -->
-                <section class="pt-0 text-center">
-                    <div class="container">
-
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <p class="lead">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed lorem nunc, sagittis bibendum rutrum id, volutpat id elit.</p>
-                                <p>Donec velit velit, porta ut fermentum et, ultricies sed eros. Fusce congue risus sit amet facilisis aliquet. Nam ex urna, faucibus porttitor nulla ultrices, varius malesuada diam. </p>
-                                <p class="lead">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed lorem nunc, sagittis bibendum rutrum id, volutpat id elit.</p>
-                                <p>Donec velit velit, porta ut fermentum et, ultricies sed eros. Fusce congue risus sit amet facilisis aliquet. Nam ex urna, faucibus porttitor nulla ultrices, varius malesuada diam. </p>
-                                <p class="lead">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed lorem nunc, sagittis bibendum rutrum id, volutpat id elit.</p>
-                                <p>Donec velit velit, porta ut fermentum et, ultricies sed eros. Fusce congue risus sit amet facilisis aliquet. Nam ex urna, faucibus porttitor nulla ultrices, varius malesuada diam. </p>
-                                <a href="#" class="btn btn-filled btn-primary">Button primary</a>
-                                <a href="#" class="btn btn-filled btn-primary">Button primary</a>
+                <section class="text-center">
+                    <!-- <div class="container">-->
+                        <div class="row text-center">
+                            <div class="col-lg-8 col-lg-push-2">
+                                <h3>FLEXIBLE ACCESS</h3>
+                                <p class="lead mb-60">You can access your pension saving as and when you like, taking however much money you want.</p>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-5 col-sm-6 col-xs-12">
+                                <!-- Widget - Links -->
+                                <div class="feature feature-1 boxed bg-light widget widget-slid-panel">
+                                    <h4 class="text-muted">Benefits</h4>
+                                    <ul class="text-left">
+                                        <li>
+                                            Take your money in chunks 
+                                        </li>
+                                        <li>
+                                            Take 25% of it tax-free
+                                        </li>
+                                        <li>
+                                            Leave the rest invested so it can potentially grow 
+                                        </li>
+                                        <li>
+                                            Pass on the money left when you die 
+                                        </li>
+                                        <li>
+                                            Run out of money if you don't budget properly 
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
 
-                    </div>
+                            <div class="col-md-7 col-sm-6 col-xs-12">
+                                <!-- Widget - Links -->
+                                <div class="feature feature-1 boxed bg-light widget widget-slid-panel2">
+                                    <h4 class="text-muted">Technical Notes</h4>
+                                    <ul class="text-left">
+                                        <li>
+                                            Unlike an annuity, these options will not provide you with a guaranteed income for life. You could run out of money if you withdraw too much or if your investment performs badly. You should continue to review the value of your product regularly and make changes if necessary
+                                        </li>
+                                        <li>
+                                            By taking money in either of these ways, it may impact on any means-tested benefits you receive 
+                                        </li>
+                                        <li>
+                                            With most investment products, costs and charges apply which could have a negative effect on your policy value over time. If you need to transfer to a new policy to access benefits, the charges under this new policy may be higher or lower than the product you already have. If you would like more information on how this may impact you, please call us
+                                        </li>
+                                        <li>
+                                            Both of these options have different tax implications, which could mean you receive less money than you expected. We may initially have to use an emergency tax code which could mean you pay more tax at the outset than you originally expected. Please call us if you need more information, or contact HMRC for further guidance 
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <a href="#" class="btn btn-filled btn-primary">Case Study</a>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <a href="#" class="btn btn-filled btn-primary">Calculator</a>
+                            </div>
+                        </div>
+                    <!-- </div>-->
                 </section>
             </div> 
             

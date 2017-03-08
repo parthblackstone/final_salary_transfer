@@ -2,6 +2,8 @@
 
 /* @var $this yii\web\View */
 use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+use yii\captcha\Captcha;
 
 $this->title = $blogPost['post_title'];
 ?>
@@ -46,52 +48,43 @@ $this->title = $blogPost['post_title'];
     							<?= $blogPost['post_content']?>
     						</div>
     						<hr class="sep-line mt-60 mb-60">
+                            <?php if(count($getComments)> 0){?>
     						<div class="post-comments post-module">
-    							<h6 class="text-muted">Comments <span class="badge bg-danger">3</span></h6>
+    							<h6 class="text-muted">Comments <span class="badge bg-danger"><?= count($getComments) ?></span></h6>
     							<div class="content">
     								<ul class="comments">
-    									<li>
-    										<div class="avatar"><img src="assets/img/avatars/avatar01.jpg" alt=""></div>
-    										<div class="content">
-    											<span class="details">Jessica Biel on September 20,  <a href="#" class="text-primary">Reply</a></span>
-    											<p>Morbi ut faucibus nulla, at fringilla est. Morbi lacinia sagittis purus.</p>
-    										</div>
-    										<ul>
-    											<li>
-    												<div class="avatar"><img src="assets/img/avatars/avatar02.jpg" alt=""></div>
-    												<div class="content">
-    													<span class="details">Jessica Biel on September 20</span>
-    													<p>Morbi ut faucibus nulla, at fringilla est. Morbi lacinia sagittis purus, nec dapibus felis tempus in. Quisque eget elementum sem, cursus tristique orci. Donec velit nisi, auctor ac pharetra in, maximus eu justo.</p>
-    												</div>
-    											</li>
-    										</ul>
-    									</li>
-    									<li>
-    										<div class="avatar"><img src="assets/img/avatars/avatar03.jpg" alt=""></div>
-    										<div class="content">
-    											<span class="details">Jessica Biel on September 20,  <a href="#" class="text-primary">Reply</a></span>
-    											<p>Morbi ut faucibus nulla, at fringilla est. Morbi lacinia sagittis purus.</p>
-    										</div>
-    									</li>
+                                        <?php foreach ($getComments as $key => $getComment) {
+                                                echo "<li>";
+                                                echo Html::tag('div', Html::img('@web/themes/img/default-user.png'), ['class'=>'avatar']);
+                                                echo Html::tag('div', '<span class="details">'.$getComment['author'] .' on '. date('F d', $getComment['date_created_gmt']->timestamp).',</span></br>'.$getComment['content'], ['class'=>'content']);
+                                                echo "</li>";
+                                        }?>
     								</ul>
     							</div>
     						</div>
+                            <?php } ?>
     						<hr class="sep-line mt-60 mb-60">
     						<div class="post-add-comment post-module">
     							<h6 class="text-muted">Write a comment</h6>
     							<div class="content">
-    								<form action="#" id="add-comment" class="validate-form">
+    								<?php $form = \yii\widgets\ActiveForm::begin(['id' => 'add-comment','options'=>['class'=> 'validate-form add-comment-form','data-message-error'=>'Opps... Something went wrong - please try again later']]); ?>
+                                        <input id="postblogcomment-post_id" name="PostBlogComment[post_id]" value=<?=$blogPost['post_id']?> type="hidden">
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name" required>
-										</div>
+											<?= $form->field($model, 'name')->textInput(['autofocus' => true,'class'=> 'form-control','placeholder'=>'Name','required'=>'required'])->label(false) ?>
+                                        </div>
 										<div class="form-group">
-											<input type="email" class="form-control" placeholder="E-mail" required>
+											<?= $form->field($model, 'email')->textInput(['class'=> 'form-control','placeholder'=>'E-mail Address','required'=>'required'])->label(false) ?>
 										</div>
     									<div class="form-group">
-    										<textarea id="comment" cols="30" rows="4" class="form-control" placeholder="Comment" required></textarea>
+    										<?= $form->field($model, 'comment')->textarea(['class'=> 'form-control','placeholder'=>'Add Comment','rows'=>'4','required'=>'required'])->label(false) ?>
     									</div>
-    									<button class="btn-submit">Send a comment</button>
-    								</form>
+                                        <!-- <div class="form-group">
+                                        <?php //$form->field($model, 'verifyCode')->widget(Captcha::className(),['class'=> 'form-control','required'=>'required']) ?>
+                                        </div> -->
+
+    									<?php $sbumitText = 'Send a comment'; ?>
+                                        <?= Html::submitButton($sbumitText, ['class' => 'btn-submit', 'name' => 'comment-button']) ?>
+    								<?php \yii\widgets\ActiveForm::end(); ?>
     							</div>
     						</div>
     					</div>
@@ -104,3 +97,4 @@ $this->title = $blogPost['post_title'];
 
     </div>
     <!-- Content / End -->
+    

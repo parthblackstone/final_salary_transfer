@@ -2212,7 +2212,11 @@ ol, ul { margin-bottom: 30px; }
 .new-container{ width: 1700px !important;}
 .cursor-pointer { cursor: pointer; }
 .displaynone {display:none;}
-.side-panel-wrapper-remove-width{width:70% !important;}
+.side-panel-wrapper-remove-width{padding:20px !important;}
+
+.widget-slid-panel ul li { padding-bottom : 20px; }
+.widget-slid-panel2 ul li { padding-bottom : 5px; }
+
 
 @-moz-keyframes zooming { 0% { -moz-transform: scale(1, 1); transform: scale(1, 1); }
   50% { -moz-transform: scale(1.1, 1.1); transform: scale(1.1, 1.1); }

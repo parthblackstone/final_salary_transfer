@@ -37,7 +37,7 @@ $this->title = 'Blog';
                                     echo Html::tag('div', Html::img($blogPost['post_thumbnail']['link'],['alt'=>$blogPost['post_thumbnail']['title']]), ['class'=>'post-image']);
                                 }
                                 echo '<div class="post-content">';
-                                    echo '<h4>'.Html::a($blogPost['post_title'], ['blog/single-post','id'=>$blogPost['post_id']]).'</h4>';
+                                    echo '<h4>'.Html::a($blogPost['post_title'], ['blog/single-post','id'=>$blogPost['post_id'],'post_name'=>$blogPost['post_name']]).'</h4>';
                                     echo '<ul class="post-meta">';
                                         echo '<li>'.date('d F, Y', $blogPost['post_date']->timestamp).'</li>';
                                     echo '</ul>';

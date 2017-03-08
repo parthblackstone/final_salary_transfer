@@ -605,7 +605,7 @@ var Zysk = {
                         $btn.addClass('loading');
                         $.ajax({
                             type: 'POST',
-                            url:  'contact-ajax',
+                            url:  HomeUrl + 'site/contact-ajax',
                             data: $form.serialize(),
                             error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
                             success     : function(data) {
@@ -651,6 +651,38 @@ var Zysk = {
                         
                         $btn.removeClass('loading error success');
                         $btn.addClass(response); 
+                    }
+                    return false;
+                });
+
+            }
+
+            // Add Comment On Blog
+            var $addCommentForm  = $('.add-comment-form');
+            
+            if($addCommentForm.length) {
+            
+                $addCommentForm.submit(function() {
+                    var $btn = $(this).find('.btn-submit'),
+                        $form = $(this),
+                        response,
+                        //msgSuccess = $(this).data('message-success'),
+                        msgError = $(this).data('message-error');
+                    if ($form.valid()){
+                        $.ajax({
+                            type: 'POST',
+                            url:  HomeUrl + 'blog/add-new-comment',
+                            data: $('.add-comment-form').serialize(),
+                            error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
+                            success     : function(data) {
+                                if (data) {
+                                    location.reload(); 
+                                }else{
+                                    response = 'error';
+                                    showNotification('error',msgError);
+                                }
+                            },
+                        });
                     }
                     return false;
                 });
