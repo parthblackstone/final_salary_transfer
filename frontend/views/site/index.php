@@ -61,7 +61,7 @@ $this->title = 'Final Salary Transfer';
                 <div class="row">
                     <div class="col-md-3">
                         <!-- Feature -->
-                        <div class="feature feature-1 feature-lg boxed bg-light animated fadeInUp visible cursor-pointer" data-animation="fadeInUp" data-toggle="side-panel">
+                        <div class="feature feature-1 feature-lg boxed bg-light animated fadeInUp visible cursor-pointer onclickFlexibility" data-animation="fadeInUp">
                             <span class="icon icon-white icon-circle icon-lg"><i class="pe-7s-graph1"></i></span>
                             <h5>Flexibility</h5>
                             <p class="text-muted">Quisque ac augue vitae lorem mollis tempor. Vivamus laoreet, dolor et commodo molestie.</p>

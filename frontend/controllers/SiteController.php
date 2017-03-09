@@ -342,4 +342,8 @@ class SiteController extends Controller {
             return $this->goHome();
         }
     }
+
+    public function actionFlexibility(){
+        return $this->render('flexibility');
+    }
 }

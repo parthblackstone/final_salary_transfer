@@ -840,6 +840,13 @@ var Zysk = {
 
 $(document).ready(function (){
     Zysk.init();
+
+
+    // bewlo data added by parth shah
+        $('.onclickFlexibility').click(function(){
+            window.location.href = HomeUrl + "site/pages/flexibility";
+        });
+    // End
 });
 
 $(window).scroll(function(){

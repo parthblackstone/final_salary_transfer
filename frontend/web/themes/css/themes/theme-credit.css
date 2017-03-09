@@ -2213,10 +2213,17 @@ ol, ul { margin-bottom: 30px; }
 .cursor-pointer { cursor: pointer; }
 .displaynone {display:none;}
 .side-panel-wrapper-remove-width{padding:20px !important;}
+.border-bottom-remove > li {border-bottom : none !important;}
+.widget-slid-panel2 > ul > li::before {
+    font-family: 'themify' !important;
+    content: "\e649" !important;
+}
 
-.widget-slid-panel ul li { padding-bottom : 20px; }
-.widget-slid-panel2 ul li { padding-bottom : 5px; }
-
+.float-right {float: right;}
+.float-left {float: left;}
+.price-table-1.featured-background-color { background-color: rgb(183,77,102); color: white !important; font-size: 16px !important; }
+.price-table-1.featured-background-color > ul {font-size: 16px !important;}
+.widget-price-table .price {font-size:36px !important;}
 
 @-moz-keyframes zooming { 0% { -moz-transform: scale(1, 1); transform: scale(1, 1); }
   50% { -moz-transform: scale(1.1, 1.1); transform: scale(1.1, 1.1); }
