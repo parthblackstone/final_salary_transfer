@@ -337,7 +337,13 @@ class SiteController extends Controller {
         if(isset($page) && !empty($page)){
 
             $pageContent = Pages::findOne(['is_active'=>1,'page_sort_code'=> $page]);
-            return $this->render('pages', ['page'=>$pageContent]);
+            if($pageContent){
+               $pageContent['content'] = str_replace(["{case-study}","{legacy-planning-calculator}"],[Yii::$app->homeUrl . 'site/pages/case-study',Yii::$app->homeUrl . 'calculator/legacy-planning-calculator'],$pageContent['content']);
+                return $this->render('pages', ['page'=>$pageContent]);
+            }else{
+                return $this->goHome();    
+            }
+            
         }else{
             return $this->goHome();
         }
@@ -346,4 +352,9 @@ class SiteController extends Controller {
     public function actionFlexibility(){
         return $this->render('flexibility');
     }
+
+    public function actionCaseStudy(){
+        return $this->render('case-study');
+    }
 }
+

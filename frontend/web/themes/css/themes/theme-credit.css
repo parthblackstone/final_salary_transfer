@@ -2224,6 +2224,7 @@ ol, ul { margin-bottom: 30px; }
 .price-table-1.featured-background-color { background-color: rgb(183,77,102); color: white !important; font-size: 16px !important; }
 .price-table-1.featured-background-color > ul {font-size: 16px !important;}
 .widget-price-table .price {font-size:36px !important;}
+.text-color{color : rgb(183,77,102); }
 
 @-moz-keyframes zooming { 0% { -moz-transform: scale(1, 1); transform: scale(1, 1); }
   50% { -moz-transform: scale(1.1, 1.1); transform: scale(1.1, 1.1); }
