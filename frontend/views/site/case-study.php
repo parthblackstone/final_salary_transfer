@@ -44,7 +44,7 @@ $this->title = 'Case Study';
                             <span class="icon icon-default icon-lg"><i class="pe-7s-comment"></i></span>
                         </div>
                         <h3 class="mb-50">Did not <em>find</em> your answer?</h3>
-                        <a href="/final_salary_transfer/site/contact" class="btn btn-primary"><i class="i-before ti-email"></i>Contact Us</a>
+                        <a href="{contact}" class="btn btn-primary"><i class="i-before ti-email"></i>Contact Us</a>
                     </div>
                 </div>
             </div>

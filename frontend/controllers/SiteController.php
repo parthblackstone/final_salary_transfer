@@ -338,7 +338,7 @@ class SiteController extends Controller {
 
             $pageContent = Pages::findOne(['is_active'=>1,'page_sort_code'=> $page]);
             if($pageContent){
-               $pageContent['content'] = str_replace(["{case-study}","{legacy-planning-calculator}"],[Yii::$app->homeUrl . 'site/pages/case-study',Yii::$app->homeUrl . 'calculator/legacy-planning-calculator'],$pageContent['content']);
+               $pageContent['content'] = str_replace(["{case-study}","{legacy-planning-calculator}","{contact}"],[Yii::$app->homeUrl . 'site/pages/case-study',Yii::$app->homeUrl . 'calculator/legacy-planning-calculator',Yii::$app->homeUrl . 'site/contact/London'],$pageContent['content']);
                 return $this->render('pages', ['page'=>$pageContent]);
             }else{
                 return $this->goHome();    
